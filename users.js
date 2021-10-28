@@ -1,9 +1,10 @@
 var express = require('express');
-var router = express.Router();
-
+var router = myDataRouter.Router();
+var value = 0;
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.get('/', function(mydata) {
+  value +=1;
+  res.send('User accesses are:'+ {value});
 });
 
 module.exports = router;
